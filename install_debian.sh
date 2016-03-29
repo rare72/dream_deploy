@@ -1,7 +1,12 @@
 #!/bin/bash
 
-# Install Git
+# Update Available Packages
 apt-get update
+
+# Install Important System Packages
+apt-get install make gcc linux-headers-amd64
+
+# Install Git
 apt-get install git-core
 git config --global user.name "Phil Vinson"
 git config --global user.email rare72_pv@yahoo.com
