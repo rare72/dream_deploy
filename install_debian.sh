@@ -4,7 +4,7 @@
 apt-get update -yV
 
 # Install Important System Packages
-apt-get install vim curl make gcc linux-headers-amd64 binutils python -yV
+apt-get install vim curl wget make gcc linux-headers-amd64 binutils python -yV
 
 # Install Git
 apt-get install git-core -yV
