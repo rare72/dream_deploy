@@ -1,3 +1,5 @@
+#!/bin/bash
+#This is a scriplet. This code belongs within an shell script
 read -p "Is this a good question (y/n)? " answer
 
 case ${answer:0:1} in
