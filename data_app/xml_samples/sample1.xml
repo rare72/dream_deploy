@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<DataFile xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' contactCount='4999' date='2012-04-14' time='22:00:14' xsi:noNamespaceSchemaLocation='gen
+.xsd'>
+<Contact id="1">
+  <Name>
+    <FirstName>CHERLY</FirstName>
+    <LastName>MORGA</LastName>
+  </Name>
+  <Address>
+    <Street>401 </Street>
+    <City>TRINIDAD</City>
+    <State>CO</State>
+    <Zip>81082</Zip>
+  </Address>
+  <ContactInfo>
+    <Email>morga@msn.com</Email>
+    <EvePhone>719-1</EvePhone>
+  </ContactInfo>
+  <Activity date="2012-04-04" source="Business Center" subSource="ES 2012 BC  22461" tdm_seq_num="EF_14832004" time="1
+0:48:54">
+    <Product>
+      <POI code="15866" year="2012"/>
+      <POI code="1-1ED0DJ" year="2012"/>
+    </Product>
+    <Survey>
+      <Question1>
+        <Response>4-6 months</Response>
+      </Question1>
+      <Question2>
+        <Response>Moab, UT</Response>
+      </Question2>
+      <Question3>
+        <Response>N</Response>
+      </Question3>
+      <Question4>
+        <Response>No</Response>
+      </Question4>
+    </Survey>
+  </Activity>
+</Contact>
+<Contact id="2">
+  <Name>
+    <FirstName>Gur</FirstName>
+    <LastName>Singh</LastName>
+  </Name>
+  <Address>
+    <Street>Garrison</Street>
+    <City>Jersey City</City>
+    <State>NJ</State>
+    <Zip>07306</Zip>
+  </Address>
+  <ContactInfo>
+    <Email>gursingh@gmail.com</Email>
+    <EvePhone>2019</EvePhone>
+  </ContactInfo>
+  <Activity date="2012-04-05" source="Autoshow" subSource="ES 2012 Marketing 22402" tdm_seq_num="EF_14837438" time="
+14:23:50">
+    <Product/>
+    <Survey>
+      <Question1>
+        <Response>Undecided</Response>
+      </Question1>
+      <Question2>
+        <Response>New York, NY</Response>
+      </Question2>
+      <Question3>
+        <Response>Y</Response>
+      </Question3>
+      <Question4>
+        <Response>No</Response>
+      </Question4>
+    </Survey>
+  </Activity>
+</Contact>
+</DataFile>
