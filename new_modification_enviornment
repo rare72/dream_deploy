@@ -1,0 +1,12 @@
+Install Python 3
+apt-get install python3
+
+Change defaault python to version 3
+alias python='/usr/bin/python3.4'
+
+Add the line to the .bashrc file 
+alias python='/usr/bin/python3.4'
+
+Modify system-wide alternatives
+update-alternatives --install /usr/bin/python python /usr/bin/python2.7 1
+update-alternatives --install /usr/bin/python python /usr/bin/python3.4 2
