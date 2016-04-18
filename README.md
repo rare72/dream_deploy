@@ -22,20 +22,19 @@ Logic:
 How to Use:
 - Deploy the Ansible Controller using your favorite virtualization tool.
 - Setup the Cloud provider with the following settings.
-	1.
-	2.
-	3.
+*
+*
+*
 - Manage environments with Ansible.
 
 
 Directory Structure:
 
-Provisioning:
-1. Power-on the Node
-2. Load the OS while setting up the Network
-3. Setup ssh connectivity
+* Power-on the Node
+* Load the OS while setting up the Network
+* Setup ssh connectivity
 
 Orchestration:
-1. Finalize ssh configuration
-2. Setup the environment
-3. Load Software packages
+* Finalize ssh configuration
+* Setup the environment
+* Load Software packages
