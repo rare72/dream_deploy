@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <linux_env>
-    <package="libxyz">
+    <debian>
       <local_env_var>declare -x COLORTERM="gnome-terminal"</local_env_var>
       <local_env_var>DEFAULTS_PATH="/usr/share/gconf/gnome.default.path"</local_env_var>
       <local_env_var>DESKTOP_SESSION="gnome"</local_env_var>
@@ -14,4 +14,12 @@
       <local_env_var>USER="himanshu"</local_env_var>
       <local_env_var>USERNAME="himanshu"</local_env_var>
       <local_env_var>WINDOWID="56623107"</local_env_var>
+      <local_env_var>daily_show_success</local_env_var>
+      <local_env_var>daily_show_log</local_env_var>
+      <local_env_var>daily_show_failure</local_env_var>
+      <local_env_var>daily_show_info</local_env_var>
+      <local_env_var>daily_show_badconfig</local_env_var>
+      <local_env_var>daily_show_output</local_env_var>
+      <local_env_var>daily_show_input</local_env_var>
+      <local_env_var>daily_show_tmp</local_env_var>
 </linux_env>

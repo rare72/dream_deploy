@@ -1,5 +1,14 @@
 #!/bin/bash
 
+# Set up the basic enviornment.
+mkdir -p -m 777 /data/logs
+mkdir -p -m 777 /data/tmp
+mkdir -p -m 777 /data/PROJECTS
+
+# Create a standard enviornment file
+{ date -u ; uname -n ;} > /data/logs/vagrant_box_build_time
+{ date -u ; uname -n ;} > /data/logs/MASTER_NODE
+
 # Update Available Packages
 apt-get update -yV
 
