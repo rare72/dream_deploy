@@ -49,14 +49,14 @@ git clone --verbose https://github.com/rare72/dream_deploy.git
 
 
 # Install vagrant keys
-curl -Lo /home/root/.ssh/authorized_keys https://raw.github.com/mitchellh/vagrant/master/keys/vagrant.pub
-curl -Lo /home/root/.ssh/vagrant.pub https://raw.github.com/mitchellh/vagrant/master/keys/vagrant.pub
-curl -Lo /home/root/.ssh/vagrant_private https://raw.githubusercontent.com/rare72/vagrant/master/keys/vagrant
+curl -Lo /root/.ssh/authorized_keys https://raw.github.com/mitchellh/vagrant/master/keys/vagrant.pub
+curl -Lo /root/.ssh/vagrant.pub https://raw.github.com/mitchellh/vagrant/master/keys/vagrant.pub
+curl -Lo /root/.ssh/vagrant_private https://raw.githubusercontent.com/rare72/vagrant/master/keys/vagrant
 
-chmod 0600 /home/root/.ssh/authorized_keys
-chmod 0600 /home/root/.ssh/vagrant_private
-chmod 0600 /home/root/.ssh/vagrant.pub
-chown -R root:root /home/vagrant/.ssh
+chmod 0600 /root/.ssh/authorized_keys
+chmod 0600 /root/.ssh/vagrant_private
+chmod 0600 /root/.ssh/vagrant.pub
+chown -R root:root /root/.ssh
 
 
 exit
