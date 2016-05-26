@@ -1,0 +1,19 @@
+#!/bin/bash
+
+## Change the system hostname
+# Update /etc/hostname
+# Update /etc/hosts
+
+sudo mkdir -p /var/lib/named/etc;
+sudo mkdir -p /var/lib/named/dev;
+sudo mkdir -p /var/lib/named/var/cache/bind;
+sudo mkdir -p /var/lib/named/var/run/bind/run;
+sudo mkdir -p /var/log/bind9;
+sudo mkdir -p /var/run/bind/run/;
+sudo mkdir -p /var/run/named/;
+sudo mkdir -p /var/run/bind/run/named/;
+
+## Reboot the System
+# sudo reboot
+
+exit

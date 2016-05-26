@@ -1,0 +1,7 @@
+# /etc/default/bind9
+
+#run resolvconf?
+RESOLVCONF-no
+
+#Startup options for the server
+OPTIONS="-u bind"

@@ -1,0 +1,29 @@
+### Preseeding other packages
+# Depending on what software you choose to install, or if things go wrong
+# during the installation process, it's possible that other questions may
+# be asked. You can preseed those too, of course. To get a list of every
+# possible question that could be asked during an install, do an
+# installation, and then run these commands:
+#   debconf-get-selections --installer > file
+#   debconf-get-selections >> file
+
+#### Advanced options
+### Running custom commands during the installation
+# d-i preseeding is inherently not secure. Nothing in the installer checks
+# for attempts at buffer overflows or other exploits of the values of a
+# preconfiguration file like this one. Only use preconfiguration files from
+# trusted locations! To drive that home, and because it's generally useful,
+# here's a way to run any shell command you'd like inside the installer,
+# automatically.
+
+# This first command is run as early as possible, just after
+# preseeding is read.
+# Prevent packaged version of VirtualBox Guest Additions being installed:
+d-i preseed/early_command string sed -i \
+  '/in-target/idiscover(){/sbin/discover|grep -v VirtualBox;}' \
+  /usr/lib/pre-pkgsel.d/20install-hwpackages
+
+# This command is run just before the install finishes, but when there is
+# still a usable /target directory. You can chroot to /target and use it
+# directly, or use the apt-install and in-target commands to easily install
+# packages and run commands in the target system.

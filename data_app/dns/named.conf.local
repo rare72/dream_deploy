@@ -1,0 +1,13 @@
+# /etc/bind/named.conf.local
+
+
+zone "linux.rocks" {
+             type master;
+             file "/etc/bind/db.pv.rocks";
+        };
+
+zone "147.168.192.in-addr.arpa" {
+        type master;
+        notify no;
+        file "/etc/bind/db.192";
+};

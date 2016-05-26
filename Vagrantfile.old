@@ -1,0 +1,74 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# All Vagrant configuration is done below. The "2" in Vagrant.configure
+# configures the configuration version (we support older styles for
+# backwards compatibility). Please don't change it unless you know what
+# you're doing.
+Vagrant.configure(2) do |config|
+config.vm.define "ansible_controller" do |controller|
+  controller.vm.box = "bento/debian-8.3"
+  controller.ssh.insert_key = false
+  controller.vm.provider :vmware_workstation do |vm|
+    vm.vmx["memsize"] = "4200"
+    vm.vmx["numvcpus"] = "2"
+    vm.gui = true
+  end
+  controller.vm.hostname = "controller-1"
+  controller.vm.network :private_network, netmask: "255.255.255.0"
+  #config.vm.network :private_network, ip: "192.168.1.30", netmask: "255.255.255.0"
+end
+
+config.vm.define "node-1" do |config|
+  config.vm.box = "bento/debian-8.3"
+  config.ssh.insert_key = false
+  config.vm.provider :vmware_workstation do |vm|
+    vm.vmx["memsize"] = "256"
+    vm.vmx["numvcpus"] = "1"
+    vm.gui = false
+  end
+  config.vm.hostname = "node-1"
+  config.vm.network :private_network, netmask: "255.255.255.0"
+  #config.vm.network :private_network, ip: "192.168.1.30", netmask: "255.255.255.0"
+end
+
+config.vm.define "node-2" do |config|
+  config.vm.box = "bento/debian-8.3"
+  config.ssh.insert_key = false
+  config.vm.provider :vmware_workstation do |vm|
+    vm.vmx["memsize"] = "256"
+    vm.vmx["numvcpus"] = "1"
+    vm.gui = false
+  end
+  config.vm.hostname = "node-2"
+  config.vm.network :private_network, netmask: "255.255.255.0"
+  #config.vm.network :private_network, ip: "192.168.1.30", netmask: "255.255.255.0"
+end
+
+config.vm.define "node-3" do |config|
+  config.vm.box = "bento/debian-8.3"
+  config.ssh.insert_key = false
+  config.vm.provider :vmware_workstation do |vm|
+    vm.vmx["memsize"] = "256"
+    vm.vmx["numvcpus"] = "1"
+    vm.gui = false
+  end
+  config.vm.hostname = "node-3"
+  config.vm.network :private_network, netmask: "255.255.255.0"
+  #config.vm.network :private_network, ip: "192.168.1.30", netmask: "255.255.255.0"
+end
+
+config.vm.define "node-4" do |config|
+  config.vm.box = "bento/debian-8.3"
+  config.ssh.insert_key = false
+  config.vm.provider :vmware_workstation do |vm|
+    vm.vmx["memsize"] = "256"
+    vm.vmx["numvcpus"] = "1"
+    vm.gui = false
+  end
+  config.vm.hostname = "node-4"
+  config.vm.network :private_network, netmask: "255.255.255.0"
+  #config.vm.network :private_network, ip: "192.168.1.30", netmask: "255.255.255.0"
+end
+
+end

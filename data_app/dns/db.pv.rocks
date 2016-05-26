@@ -1,0 +1,21 @@
+# /etc/bind/db.pv.rocks
+
+;
+; This is the forward zone for pv.rocks internal domain
+;
+$TTL    3h
+@       IN      SOA       debian-8.linux.rocks. vagrant.localhost. (
+                          1        ; Serial
+                          3h       ; Refresh after 3 hours
+                          1h       ; Retry after 1 hour
+                          1w       ; Expire after 1 week
+                          1h )     ; Negative caching TTL of 1 day
+;
+@       IN      NS      debian-8.linux.rocks.
+@       IN      A       127.0.0.1
+@       IN      AAAA    ::1
+
+; Below are A Records Addresses
+
+; Below are CNAME Record Addresses (Aliases) - Point to an A Record Address
+server01                IN      CNAME   debian-8.pv.rocks.
