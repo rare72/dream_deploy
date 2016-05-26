@@ -19,12 +19,12 @@ mkdir -p -m 777 /data/data_app/ansible
 { date -u ; uname -n ;} > /data/logs/MASTER_NODE
 
 ## Update Available Packages
-apt-get update -yV
+apt-get update -y
 
 
 ## Install Important System Packages
-apt-get install vim-tiny curl wget make gcc-4.9-base binutils python build-essential linux-headers-$(uname -r) sysv-rc rcconf -yV
-apt-get install python-pip python-dev python-simplejson python-yaml python-gmpy -yV
+apt-get install vim-tiny curl wget make gcc-4.9-base binutils python build-essential linux-headers-$(uname -r) sysv-rc rcconf -y
+apt-get install python-pip python-dev python-simplejson python-yaml python-gmpy -y
 pip install paramiko PyYAML Jinja2 httplib2 six
 
 
@@ -33,7 +33,7 @@ pip install ansible
 
 
 ## Install Git
-apt-get install git-core -yV
+apt-get install git-core -y
 git config --global user.name "Phil Vinson"
 git config --global user.email rare72_pv@yahoo.com
 git config --list
