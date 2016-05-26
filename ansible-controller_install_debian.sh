@@ -18,7 +18,7 @@ $projects
 { date -u ; uname -n ;} > /data/logs/MASTER_NODE
 
 ## Update Available Packages
- apt-get update
+ apt-get update -yV
 
 ## Install Important System Packages
  apt-get install vim-tiny curl wget make gcc-4.9-base binutils python build-essential linux-headers-$(uname -r) sysv-rc rcconf -yV
