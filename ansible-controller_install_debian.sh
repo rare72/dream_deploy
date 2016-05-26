@@ -52,8 +52,3 @@ sudo chown -R vagrant:vagrant /home/vagrant/.ssh
 
 
 exit
-
-
-
-
-sudo curl -Lo /home/vagrant/.ssh/authorized_keys 'https://raw.github.com/mitchellh/vagrant/master/keys/vagrant.pub' ;sudo curl -Lo /home/vagrant/.ssh/vagrant.pub 'https://raw.github.com/mitchellh/vagrant/master/keys/vagrant.pub'; sudo curl -Lo /home/vagrant/.ssh/vagrant_private 'https://raw.githubusercontent.com/rare72/vagrant/master/keys/vagrant'; sudo chmod 0600 /home/vagrant/.ssh/authorized_keys; sudo chmod 0600 /home/vagrant/.ssh/vagrant_private; sudo chmod 0600 /home/vagrant/.ssh/vagrant.pub; sudo chown -R vagrant:vagrant /home/vagrant/.ssh
