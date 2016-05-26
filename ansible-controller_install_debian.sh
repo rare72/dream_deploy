@@ -25,8 +25,8 @@ apt-get update -y
 
 ## Install Important System Packages
 apt-get install vim-tiny curl wget make gcc-4.9-base binutils python build-essential linux-headers-$(uname -r) sysv-rc rcconf -y
-apt-get install python-pip python-dev python-simplejson python-yaml python-gmpy -y
-pip install paramiko PyYAML Jinja2 httplib2 six pycrypto Markupsafe cryptography --upgrade
+apt-get install python-pip python-dev python-simplejson python-yaml -y
+pip install paramiko PyYAML Jinja2 httplib2 six pycrypto Markupsafe cryptography setuptools --upgrade
 
 
 ##Install Ansible
