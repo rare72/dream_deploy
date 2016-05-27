@@ -30,7 +30,7 @@ pip install paramiko PyYAML Jinja2 httplib2 six pycrypto Markupsafe cryptography
 
 
 ##Install Ansible
-pip install ansible
+pip install ansible --verbose
 
 
 ## Install Git
