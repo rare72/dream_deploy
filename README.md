@@ -1,5 +1,5 @@
 # dream_deploy
-# NOT FINISHED - 2016-04-18
+# NOT FINISHED - 2016-05-27
 Dream Deployment + Provisioning using Ansible and Shell Scripting
 
 Provisioning: Is preformed with Vagrant w/VMware Workstation plugin. Alternative manual efforts can be used.
@@ -30,6 +30,7 @@ How to Use:
 *
 *
 - Manage environments with Ansible.
+- To initiate the install script "curl -Lo https://github.com/rare72/dream_deploy/raw/master/ansible-controller_install_debian.sh"
 
 
 Directory Structure:
