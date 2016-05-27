@@ -11,7 +11,7 @@ mkdir -p -m 777 /data/tmp
 mkdir -p -m 777 /data/PROJECTS
 mkdir -p -m 777 /data/data_app/keys/bad_archive
 mkdir -p -m 777 /data/data_app/ansible
-mkdir -p -m 700 /root/.ssh/
+mkdir -p -m 640 /root/.ssh/
 
 
 ## Setup Enviornment variables
@@ -26,7 +26,7 @@ apt-get update -y
 ## Install Important System Packages
 apt-get install vim-tiny curl wget make gcc-4.9-base binutils python build-essential linux-headers-$(uname -r) sysv-rc rcconf -y
 apt-get install python-pip python-dev python-simplejson python-yaml -y
-pip install paramiko PyYAML Jinja2 httplib2 six pycrypto Markupsafe setuptools --upgrade
+pip install paramiko PyYAML Jinja2 httplib2 six pycrypto Markupsafe cryptography setuptools --upgrade
 
 
 ##Install Ansible
@@ -52,12 +52,11 @@ git clone --verbose https://github.com/rare72/dream_deploy.git
 # Install vagrant keys
 curl -Lo /root/.ssh/authorized_keys https://raw.github.com/mitchellh/vagrant/master/keys/vagrant.pub
 curl -Lo /root/.ssh/vagrant.pub https://raw.github.com/mitchellh/vagrant/master/keys/vagrant.pub
-curl -Lo /root/.ssh/vagrant https://raw.githubusercontent.com/rare72/vagrant/master/keys/vagrant
+curl -Lo /root/.ssh/vagrant_private https://raw.githubusercontent.com/rare72/vagrant/master/keys/vagrant
 
-chmod 600 /root/.ssh/authorized_keys
-chmod 600 /root/.ssh/vagrant
-chmod 600 /root/.ssh/vagrant.pub
-chmod 700 /root/.ssh/
+chmod 0600 /root/.ssh/authorized_keys
+chmod 0600 /root/.ssh/vagrant_private
+chmod 0600 /root/.ssh/vagrant.pub
 chown -R root:root /root/.ssh
 
 
