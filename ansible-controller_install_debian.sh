@@ -38,6 +38,9 @@ pip install ansible --verbose
 apt-get install git-core -y
 git config --global user.name "Phil Vinson"
 git config --global user.email rare72_pv@yahoo.com
+git config color.status=auto
+git config color.branch=auto
+git config color.interactive=auto
 git config --list
 ### Do not forget to verify the setting's with the "~/.gitconfig" file
 
@@ -55,10 +58,10 @@ curl -Lo /root/.ssh/authorized_keys https://github.com/mitchellh/vagrant/raw/mas
 curl -Lo /root/.ssh/vagrant.pub https://github.com/mitchellh/vagrant/raw/master/keys/vagrant.pub
 curl -Lo /root/.ssh/vagrant https://github.com/mitchellh/vagrant/raw/master/keys/vagrant
 
+chown -R root:root /root/.ssh
 chmod 600 /root/.ssh/authorized_keys
 chmod 600 /root/.ssh/vagrant
 chmod 600 /root/.ssh/vagrant.pub
-chown -R root:root /root/.ssh
 
 
 exit
