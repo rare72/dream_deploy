@@ -58,10 +58,11 @@ curl -Lo /root/.ssh/authorized_keys https://github.com/mitchellh/vagrant/raw/mas
 curl -Lo /root/.ssh/vagrant.pub https://github.com/mitchellh/vagrant/raw/master/keys/vagrant.pub
 curl -Lo /root/.ssh/vagrant https://github.com/mitchellh/vagrant/raw/master/keys/vagrant
 
+# Set Proper Permission's
 chown -R root:root /root/.ssh
 chmod 600 /root/.ssh/authorized_keys
 chmod 600 /root/.ssh/vagrant
 chmod 600 /root/.ssh/vagrant.pub
-
+chmod -Rv 775 /data/PROJECTS/dream_deploy
 
 exit
