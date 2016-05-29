@@ -25,9 +25,15 @@ apt-get update -y
 
 
 ## Install Important System Packages
-apt-get install vim-tiny curl wget make gcc-4.9-base binutils python build-essential linux-headers-$(uname -r) sysv-rc -y
-apt-get install python-pip python-dev python-simplejson python-yaml -y
-pip install paramiko PyYAML Jinja2 httplib2 six pycrypto Markupsafe setuptools requests ecdsa --upgrade
+apt-get install vim-tiny curl wget make gcc-4.9-base binutils build-essential sysv-rc uuid-runtime linux-headers-$(uname -r)  -y
+
+## Install Python
+apt-get install python2.7 python-pip python2.7-dev python-simplejson python-yaml -y
+apt-get install python-tk python-dev
+apt-get install python-crypto python-markupsafe python-setuptools python-subversion -y
+pip install paramiko PyYAML Jinja2 httplib2 six pycrypto Markupsafe setuptools requests ecdsa mercurial --upgrade
+# pip install paramiko PyYAML Jinja2 httplib2 six pycrypto Markupsafe setuptools requests ecdsa mercurial --upgrade
+pip install mercurial git subversion bazaar --upgrade
 
 
 ##Install Ansible
@@ -41,6 +47,7 @@ git config --global user.email rare72_pv@yahoo.com
 git config color.status=auto
 git config color.branch=auto
 git config color.interactive=auto
+git config --global push.default current
 git config --list
 ### Do not forget to verify the setting's with the "~/.gitconfig" file
 
@@ -53,7 +60,7 @@ git clone --verbose https://github.com/rare72/dream_deploy.git
 ## Post Ansible Install
 
 
-# Install vagrant keys
+## Install vagrant keys
 curl -Lo /root/.ssh/authorized_keys https://github.com/mitchellh/vagrant/raw/master/keys/vagrant.pub
 curl -Lo /root/.ssh/vagrant.pub https://github.com/mitchellh/vagrant/raw/master/keys/vagrant.pub
 curl -Lo /root/.ssh/vagrant https://github.com/mitchellh/vagrant/raw/master/keys/vagrant
@@ -63,6 +70,7 @@ chown -R root:root /root/.ssh
 chmod 600 /root/.ssh/authorized_keys
 chmod 600 /root/.ssh/vagrant
 chmod 600 /root/.ssh/vagrant.pub
-chmod -Rv 775 /data/PROJECTS/dream_deploy
+chmod -Rv 644 /data/PROJECTS/dream_deploy/
+chmod -Rv 775 /data/PROJECTS/dream_deploy/*.sh
 
 exit
