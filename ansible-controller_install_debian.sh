@@ -29,9 +29,12 @@ apt-get install vim-tiny curl wget make gcc-4.9-base binutils build-essential sy
 
 ## Install Python
 apt-get install python2.7 python-pip python2.7-dev python-simplejson python-yaml -y
-apt-get install python-tk python-dev
-apt-get install python-crypto python-markupsafe python-setuptools python-subversion -y
-pip install paramiko PyYAML Jinja2 httplib2 six pycrypto Markupsafe setuptools requests ecdsa mercurial --upgrade
+
+apt-get install python-crypto python-markupsafe python-setuptools python-subversion python-six python-requests python-urllib3 -y
+
+apt-get install python-doc python-tk python-dev python-cryptography-doc python-cryptography-vectors python-genshi python-lxml python-openssl-doc python-openssl-dbg python-distribute python-distribute-doc python-ply-doc doc-base python2.7-doc -y
+
+pip install paramiko Jinja2 httplib2 ecdsa mercurial --upgrade
 # pip install paramiko PyYAML Jinja2 httplib2 six pycrypto Markupsafe setuptools requests ecdsa mercurial --upgrade
 pip install mercurial git subversion bazaar --upgrade
 
