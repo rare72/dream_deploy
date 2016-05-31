@@ -25,22 +25,25 @@ apt-get update -y
 
 
 ## Install Important System Packages
-apt-get install vim-tiny curl wget make gcc-4.9-base binutils build-essential sysv-rc uuid-runtime linux-headers-$(uname -r)  -y
+apt-get install vim-tiny curl wget make gcc-4.9-base binutils build-essential sysv-rc uuid-runtime linux-headers-$(uname -r)
 
 ## Install Python
-apt-get install python2.7 python-pip python2.7-dev python-simplejson python-yaml -y
+apt-get install python2.7 python-pip python2.7-dev python-simplejson python-yaml
 
-apt-get install python-crypto python-markupsafe python-setuptools python-subversion python-six python-requests python-urllib3 -y
+apt-get install python-crypto python-markupsafe python-six python-requests python-urllib3 python-wheel
 
-apt-get install python-doc python-tk python-dev python-cryptography-doc python-cryptography-vectors python-genshi python-lxml python-openssl-doc python-openssl-dbg python-distribute python-distribute-doc python-ply-doc doc-base python2.7-doc -y
+# apt-get install python-subversion
 
-pip install paramiko Jinja2 httplib2 ecdsa mercurial --upgrade
-# pip install paramiko PyYAML Jinja2 httplib2 six pycrypto Markupsafe setuptools requests ecdsa mercurial --upgrade
-pip install mercurial git subversion bazaar --upgrade
+apt-get install python-doc python-tk python-dev python-cryptography-doc python-cryptography-vectors python-genshi python-lxml python-openssl-doc python-openssl-dbg python-distribute python-distribute-doc python-ply-doc doc-base python2.7-doc python-crypto-dbg python-crypto-doc
+
+pip2.7 install setuptools
+pip2.7 install Jinja2 httplib2 ecdsa
+# pip install paramiko PyYAML Jinja2 httplib2 six pycrypto Markupsafe setuptools requests ecdsa mercurial subversion git --upgrade
+pip2.7 install mercurial bazaar setuptools
 
 
 ##Install Ansible
-pip install ansible --verbose
+pip2.7 install ansible --verbose
 
 
 ## Install Git
@@ -60,15 +63,13 @@ cd /data/PROJECTS
 git clone --verbose https://github.com/rare72/dream_deploy.git
 
 
-## Post Ansible Install
-
-
 ## Install vagrant keys
 curl -Lo /root/.ssh/authorized_keys https://github.com/mitchellh/vagrant/raw/master/keys/vagrant.pub
 curl -Lo /root/.ssh/vagrant.pub https://github.com/mitchellh/vagrant/raw/master/keys/vagrant.pub
 curl -Lo /root/.ssh/vagrant https://github.com/mitchellh/vagrant/raw/master/keys/vagrant
 
-# Set Proper Permission's
+
+## Set System Permission's
 chown -R root:root /root/.ssh
 chmod 600 /root/.ssh/authorized_keys
 chmod 600 /root/.ssh/vagrant
