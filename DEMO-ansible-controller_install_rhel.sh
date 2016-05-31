@@ -35,7 +35,7 @@ yum install git curl wget make gcc binutils
 
 ## Install EPEL
 cd /data/INSTALLER/ ; curl -LO  https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-yum install epel-release
+yum install /data/INSTALLER/epel-release-latest-7.noarch.rpm3
 ls -lashrt /data/INSTALLER
 
 
