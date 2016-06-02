@@ -58,14 +58,25 @@ yum install ansible --verbose -y
 ## Install Git
 yum install git -y
 yum install git-core -y
+git config --global push.default current
 git config --global user.useConfigOnly=true
 git config --global user.name "Phil Vinson"
 git config --global user.email rare72_pv@yahoo.com
 git config --global color.status=auto
-git config --global color.branch=auto
-git config --global color.interactive=auto
 git config --global color.ui auto
-git config --global push.default current
+git config --global color.diff=auto
+git config --global color.status=auto
+git config --global color.branch=auto
+git config --global color.interactive=true
+git config --global core.symlinks=false
+git config --global core.autocrlf=input
+git config --global core.fscache=true
+git config --global core.repositoryformatversion=0
+git config --global core.filemode=false
+git config --global core.bare=false
+git config --global core.logallrefupdates=true
+git config --global core.ignorecase=true
+git config --global core.hidedotfiles=dotGitOnly
 git config --list
 ### Do not forget to verify the setting's with the "~/.gitconfig" file
 
