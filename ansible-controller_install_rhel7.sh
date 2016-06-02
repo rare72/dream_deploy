@@ -31,11 +31,12 @@ yum install net-tools -y
 ## Install Important System Packages
 yum install vim-enhanced -y
 yum install kernel-headers kernel-devel glibc glibc-devel -y
-yum install git curl wget make gcc binutils -y
+yum install curl wget make gcc binutils -y
+
 
 ## Install EPEL
 cd /data/INSTALLER/ ; curl -LO  https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-yum install epel-release -y
+yum install /data/INSTALLER/epel-release-latest-7.noarch.rpm -y
 ls -lashrt /data/INSTALLER
 
 
@@ -50,32 +51,38 @@ yum install python-devel python-lxml python-six python-urllib3 PyYaml python pyt
 yum install python-pip python-simplejson -y
 
 
-##Install Ansible
+## Install Ansible
 yum install ansible --verbose -y
 
 
 ## Install Git
+yum install git -y
 yum install git-core -y
+git config --global user.useConfigOnly=true
 git config --global user.name "Phil Vinson"
 git config --global user.email rare72_pv@yahoo.com
-git config color.status=auto
-git config color.branch=auto
-git config color.interactive=auto
+git config --global color.status=auto
+git config --global color.branch=auto
+git config --global color.interactive=auto
+git config --global color.ui auto
 git config --global push.default current
 git config --list
 ### Do not forget to verify the setting's with the "~/.gitconfig" file
 
 
 ## Deploy the dream_deploy repository
-cd /data/PROJECTS
-git clone --verbose https://github.com/rare72/dream_deploy.git
+cd /data/PROJECTS ; git clone --verbose https://github.com/rare72/dream_deploy.git
 
 
-## Install vagrant keys
+## Install vagrant keys for "root" user
 curl -Lo /root/.ssh/authorized_keys https://github.com/mitchellh/vagrant/raw/master/keys/vagrant.pub
 curl -Lo /root/.ssh/vagrant.pub https://github.com/mitchellh/vagrant/raw/master/keys/vagrant.pub
 curl -Lo /root/.ssh/vagrant https://github.com/mitchellh/vagrant/raw/master/keys/vagrant
 
+## Install vagrant keys for "vagrant" user
+curl -Lo /home/vagrant/.ssh/authorized_keys https://github.com/mitchellh/vagrant/raw/master/keys/vagrant.pub
+curl -Lo /home/vagrant/.ssh/vagrant.pub https://github.com/mitchellh/vagrant/raw/master/keys/vagrant.pub
+curl -Lo /home/vagrant/.ssh/vagrant https://github.com/mitchellh/vagrant/raw/master/keys/vagrant
 
 ## Set System Permission's
 chown -R root:root /root/.ssh
@@ -84,5 +91,10 @@ chmod 600 /root/.ssh/vagrant
 chmod 600 /root/.ssh/vagrant.pub
 chmod -Rv 644 /data/PROJECTS/dream_deploy/
 chmod -Rv 775 /data/PROJECTS/dream_deploy/*.sh
+
+chown -R vagrant:vagrant /home/vagrant/.ssh
+chmod 600 /home/vagrant/.ssh/authorized_keys
+chmod 600 /home/vagrant/.ssh/vagrant
+chmod 600 /home/vagrant/.ssh/vagrant.pub
 
 exit
