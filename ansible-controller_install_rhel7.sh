@@ -57,7 +57,7 @@ yum install ansible --verbose -y
 
 ## Install Git
 yum install git -y
-yum install git-core -y
+yum install git-core gnome-keyring -y
 git config --global push.default current
 git config --global user.useConfigOnly=true
 git config --global user.name "Phil Vinson"
@@ -77,12 +77,13 @@ git config --global core.bare=false
 git config --global core.logallrefupdates=true
 git config --global core.ignorecase=true
 git config --global core.hidedotfiles=dotGitOnly
+git config --global credential.helper gnome-keyring
 git config --list
 ### Do not forget to verify the setting's with the "~/.gitconfig" file
 
 
 ## Deploy the dream_deploy repository
-cd /data/PROJECTS ; git clone --verbose https://github.com/rare72/dream_deploy.git
+cd /data/PROJECTS ; git clone --verbose https://Rare72@github.com/rare72/dream_deploy.git
 
 
 ## Install vagrant keys for "root" user
