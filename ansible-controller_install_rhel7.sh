@@ -102,7 +102,7 @@ chmod 600 /root/.ssh/authorized_keys
 chmod 600 /root/.ssh/vagrant
 chmod 600 /root/.ssh/vagrant.pub
 chmod -Rv 644 /data/PROJECTS/dream_deploy/
-chmod -Rv 775 /data/PROJECTS/dream_deploy/*.sh
+chmod -Rv 754 /data/PROJECTS/dream_deploy/*.sh
 
 # chown -R vagrant:vagrant /home/vagrant/.ssh
 chmod 600 /home/vagrant/.ssh/authorized_keys
