@@ -48,6 +48,7 @@ yum install perl perl-devel -y
 
 ## Install Python
 yum install python-devel python-lxml python-six python-urllib3 PyYAML python python-jinja2 redhat-support-lib-python -y
+wait 5
 yum install python-pip python-simplejson -y
 
 
@@ -71,7 +72,7 @@ git config --global color.interactive true
 git config --global core.symlinks false
 git config --global core.autocrlf input
 git config --global core.fscache true
-git config --global core.repositoryformatversion=0
+git config --global core.repositoryformatversion 0
 git config --global core.filemode false
 git config --global core.bare false
 git config --global core.logallrefupdates true
@@ -102,7 +103,7 @@ chmod 600 /root/.ssh/authorized_keys
 chmod 600 /root/.ssh/vagrant
 chmod 600 /root/.ssh/vagrant.pub
 chmod -Rv 644 /data/PROJECTS/dream_deploy/
-chmod -Rv 754 /data/PROJECTS/dream_deploy/*.sh
+chmod -Rv 711 /data/PROJECTS/dream_deploy/*.sh
 
 # chown -R vagrant:vagrant /home/vagrant/.ssh
 chmod 600 /home/vagrant/.ssh/authorized_keys
