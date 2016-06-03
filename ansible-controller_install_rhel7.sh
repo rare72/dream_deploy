@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ### This Script is used to setup the Ansible Controller and the associated enviornment.
-### Install Ansible
+### Deploy Ansible
 
 ## Set up the directory structure within the enviornment.
 mkdir -p -m 777 /data/logs
@@ -23,7 +23,7 @@ mkdir -p -m 700 /root/.ssh/
 { date -u ; uname -n ;} > /data/logs/MASTER_NODE
 
 ## Update Available Packages
-yum install update -y
+yum update -y
 
 ## Install "net-tools"
 yum install net-tools -y
@@ -47,7 +47,7 @@ yum install perl perl-devel -y
 
 
 ## Install Python
-yum install python-devel python-lxml python-six python-urllib3 PyYaml python python-jinja2 redhat-support-lib-python -y
+yum install python-devel python-lxml python-six python-urllib3 PyYAML python python-jinja2 redhat-support-lib-python -y
 yum install python-pip python-simplejson -y
 
 
@@ -59,24 +59,24 @@ yum install ansible --verbose -y
 # yum install git -y
 yum install git-core gnome-keyring -y
 git config --global push.default current
-git config --global user.useConfigOnly=true
+git config --global user.useConfigOnly true
 git config --global user.name "Phil Vinson"
 git config --global user.email rare72_pv@yahoo.com
-git config --global color.status=auto
+git config --global color.status auto
 git config --global color.ui auto
-git config --global color.diff=auto
-git config --global color.status=auto
-git config --global color.branch=auto
-git config --global color.interactive=true
-git config --global core.symlinks=false
-git config --global core.autocrlf=input
-git config --global core.fscache=true
+git config --global color.diff auto
+git config --global color.status auto
+git config --global color.branch auto
+git config --global color.interactive true
+git config --global core.symlinks false
+git config --global core.autocrlf input
+git config --global core.fscache true
 git config --global core.repositoryformatversion=0
-git config --global core.filemode=false
-git config --global core.bare=false
-git config --global core.logallrefupdates=true
-git config --global core.ignorecase=true
-git config --global core.hidedotfiles=dotGitOnly
+git config --global core.filemode false
+git config --global core.bare false
+git config --global core.logallrefupdates true
+git config --global core.ignorecase true
+git config --global core.hidedotfiles dotGitOnly
 git config --global credential.helper gnome-keyring
 git config --list
 ### Do not forget to verify the setting's with the "~/.gitconfig" file
