@@ -56,7 +56,7 @@ yum install ansible --verbose -y
 
 
 ## Install Git
-yum install git -y
+# yum install git -y
 yum install git-core gnome-keyring -y
 git config --global push.default current
 git config --global user.useConfigOnly=true
@@ -83,7 +83,7 @@ git config --list
 
 
 ## Deploy the dream_deploy repository
-cd /data/PROJECTS ; git clone --verbose https://Rare72@github.com/rare72/dream_deploy.git
+cd /data/PROJECTS ; git clone --verbose https://rare72@github.com/rare72/dream_deploy.git
 
 
 ## Install vagrant keys for "root" user
