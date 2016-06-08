@@ -15,12 +15,15 @@ mkdir -p -m 777 /data/INSTALLER
 mkdir -p -m 777 /data/data_app/keys/bad_archive
 mkdir -p -m 777 /data/data_app/ansible
 mkdir -p -m 700 /root/.ssh/
+mkdir -p -m 700 /home/vagrant/.ssh/
 
 
 ## Setup Enviornment variables
 ## Create a standard enviornment file
 { date -u ; uname -n ;} > /data/logs/vagrant_box_build_time
 { date -u ; uname -n ;} > /data/logs/MASTER_NODE
+{ date -u ; uname -n ;} > /data/logs/ansible/MASTER_NODE
+
 
 ## Update Available Packages
 yum update -y

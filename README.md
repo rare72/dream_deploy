@@ -31,12 +31,13 @@ How to Use:
 *
 - Manage environments with Ansible.
 - To initiate the install script
-  - Debian:"wget https://github.com/rare72/dream_deploy/raw/master/ansible-controller_install_debian.sh"
-  - RHEL 7: "wget https://raw.githubusercontent.com/rare72/dream_deploy/master/ansible-controller_install_rhel.sh"
+  #- Debian:"wget https://github.com/rare72/dream_deploy/raw/master/ansible-controller_install_debian.sh"
+  - RHEL 7: "wget https://raw.githubusercontent.com/rare72/dream_deploy/master/controller-ansible_install_rhel7.sh"
 
 
 Directory Structure:
 
+Provisioning:
 * Power-on the Node
 * Load the OS while setting up the Network
 * Setup ssh connectivity
