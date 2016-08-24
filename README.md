@@ -38,11 +38,11 @@ How to Use:
 Directory Structure:
 
 Provisioning:
-* Power-on the Node
+* Power-on the Node (Achieved via Vagrant or Cloud Service Provider)
 * Load the OS while setting up the Network
-* Setup ssh connectivity
 
 Orchestration:
+* Setup ssh connectivity
 * Finalize ssh configuration
 * Setup the environment
 * Load Software packages

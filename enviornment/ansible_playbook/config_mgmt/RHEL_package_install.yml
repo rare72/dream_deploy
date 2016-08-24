@@ -1,0 +1,164 @@
+---
+- hosts: localhost
+  tasks:
+    # - name: install the latest version of Apache
+    #   yum: name=httpd state=latest
+    #   register: pkg_install_package1
+
+    - name: install the latest version of tree
+      yum: name=tree state=latest
+      register: pkg_install_tree
+
+    - name: install the latest version of curl
+      yum: name=curl state=latest
+      register: pkg_install_curl
+
+    - name: install the latest version of wget
+      yum: name=wget state=latest
+      register: pkg_install_wget
+
+    - name: install the latest version of net-tools
+      yum: name=net-tools state=latest
+      register: pkg_install_net-tools
+
+    - name: install the latest version of vim-enhanced
+      yum: name=vim-enhanced state=latest
+      register: pkg_install_vim-enhanced
+
+    - name: install the latest version of kernel-headers
+      yum: name=kernel-headers state=latest
+      register: pkg_install_kernel-headers
+
+    - name: install the latest version of kernel-devel
+      yum: name=kernel-devel state=latest
+      register: pkg_install_kernel-devel
+
+    - name: install the latest version of glibc
+      yum: name=glibc state=latest
+      register: pkg_install_glibc
+
+    - name: install the latest version of glibc-devel
+      yum: name=glibc-devel state=latest
+      register: pkg_install_glibc-devel
+
+    - name: install the latest version of make
+      yum: name=make state=latest
+      register: pkg_install_make
+
+    - name: install the latest version of gcc
+      yum: name=gcc state=latest
+      register: pkg_install_gcc
+
+    - name: install the latest version of binutils
+      yum: name=binutils state=latest
+      register: pkg_install_binutils
+
+    - name: install the latest version of python-cryptography
+      yum: name=python-cryptography state=latest
+      register: pkg_install_python-cryptography
+
+    - name: install the latest version of perl
+      yum: name=perl state=latest
+      register: pkg_install_perl
+
+    - name: install the latest version of perl-devel
+      yum: name=perl-devel state=latest
+      register: pkg_install_perl-devel
+
+    - name: install the latest version of python-pip
+      yum: name=python-pip state=latest
+      register: pkg_install_python-pip
+
+    - name: install the latest version of python-simplejson
+      yum: name=python-simplejson state=latest
+      register: pkg_install_python-simplejson
+
+    - name: install the latest version of python
+      yum: name=python state=latest
+      register: pkg_install_python
+
+    - name: install the latest version of python-devel
+      yum: name=python-devel state=latest
+      register: pkg_install_python-devel
+
+    - name: install the latest version of python-lxml
+      yum: name=python-lxml state=latest
+      register: pkg_install_python-lxml
+
+    - name: install the latest version of python-six
+      yum: name=python-six state=latest
+      register: pkg_install_python-six
+
+    - name: install the latest version of python-urllib3
+      yum: name=python-urllib3 state=latest
+      register: pkg_install_python-urllib3
+
+    - name: install the latest version of PyYAML
+      yum: name=PyYAML state=latest
+      register: pkg_install_PyYAML
+
+    - name: install the latest version of python-jinja2
+      yum: name=python-jinja2 state=latest
+      register: pkg_install_python-jinja2
+
+    - name: install the latest version of redhat-support-lib-python
+      yum: name=redhat-support-lib-python state=latest
+      register: pkg_install_redhat-support-lib-python
+
+    - name: install the latest version of python-paramiko.noarch
+      yum: name=python-paramiko state=latest
+      register: pkg_install_python-paramiko
+
+    - name: install the latest version of python-paramiko-doc.noarch
+      yum: name=python-paramiko-doc state=latest
+      register: pkg_install_python-paramiko-doc
+
+    - name: install the latest version of python2-paramiko
+      yum: name=python2-paramiko state=latest
+      register: pkg_install_python2-paramiko
+
+    - name: install the latest version of python-socketIO-client
+      yum: name=python-socketIO-client state=latest
+      register: pkg_install_python-socketIO-client
+
+    - name: install the latest version of python-requests
+      yum: name=python-requests state=latest
+      register: pkg_install_python-requests
+
+    - name: install the latest version of python-re2
+      yum: name=python-re2 state=latest
+      register: pkg_install_python-re2
+
+  results:
+      - debug: pkg_install_tree
+      - debug: pkg_install_curl
+      - debug: pkg_install_wget
+      - debug: pkg_install_net-tools
+      - debug: pkg_install_vim-enhanced
+      - debug: pkg_install_kernel-headers
+      - debug: pkg_install_kernel-devel
+      - debug: pkg_install_glibc
+      - debug: pkg_install_glibc-devel
+      - debug: pkg_install_make
+      - debug: pkg_install_gcc
+      - debug: pkg_install_binutils
+      - debug: pkg_install_python-cryptography
+      - debug: pkg_install_perl
+      - debug: pkg_install_perl-devel
+      - debug: pkg_install_python-pip
+      - debug: pkg_install_python-simplejson
+      - debug: pkg_install_python
+      - debug: pkg_install_python-devel
+      - debug: pkg_install_python-lxml
+      - debug: pkg_install_python-six
+      - debug: pkg_install_python-urllib3
+      - debug: pkg_install_PyYAML
+      - debug: pkg_install_python-jinja2
+      - debug: pkg_install_redhat-support-lib-python
+      - debug: pkg_install_python-paramiko
+      - debug: pkg_install_python-paramiko-doc
+      - debug: pkg_install_python2-paramiko
+      - debug: pkg_install_python-socketIO-client
+      - debug: pkg_install_python-requests
+      - debug: pkg_install_python-re2
+      - debug: var=pkg_install_pythonrequests

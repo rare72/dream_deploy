@@ -1,0 +1,49 @@
+---
+- hosts: localhost
+  tasks:
+    - name: Install pip docxtpl
+      pip: name=docxtpl state=latest
+      register: python_module_docxtpl
+
+      - name: Install pip ninja2
+      pip: name=ninja2 state=latest
+      register: python_module_ninja2
+
+      - name: Install pip netaddr
+      pip: name=netaddr state=latest
+      register: python_module_netaddr
+
+    - name: Install pip package pexpect
+      pip: name=pexpect state=latest
+      register: python_module_pexpect
+
+    - name: Install pip datetime
+      pip: name=datetime state=latest
+      register: python_module_datetime
+
+    - name: Install pip bottle
+      pip: name=bottle state=latest
+      register: python_module_bottle
+
+    - name: Install pip PyYAML
+      pip: name=PyYAML state=latest
+      register: python_module_PyYAML
+
+    - name: Install pip httplib2
+      pip: name=httplib2 state=latest
+      register: python_module_httplib2
+
+    - name: Install pip requests
+      pip: name=requests state=latest
+      register: python_module_requests
+
+  results:
+    - debug: var=python_module_PyYAML
+    - debug: var=python_module_docxtpl
+    - debug: var=python_module_datetime
+    - debug: var=python_module_netaddr
+    - debug: var=python_module_bottle
+    - debug: var=python_module_pexpect
+    - debug: var=python_module_ninja2
+    - debug: var=python_module_httplib2
+    - debug: var=python_module_requests
