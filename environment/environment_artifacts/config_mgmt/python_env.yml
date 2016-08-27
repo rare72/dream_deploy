@@ -1,6 +1,11 @@
 ---
 - hosts: localhost
+
   tasks:
+    - name: Install pip pycurl
+      pip: name=pycurl state=latest
+      register: python_module_pycurl
+
     - name: Install pip docxtpl
       pip: name=docxtpl state=latest
       register: python_module_docxtpl

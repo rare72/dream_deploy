@@ -1,0 +1,57 @@
+---
+- hosts: localhost
+  environment_build_tasks:
+    - name:
+      shell: { date -u ; uname -n ;} > /data/logs/vagrant-box-build-time_`uname -n`
+    - name:
+      shell: { date -u ; uname -n ;} > /data/logs/d-server_`uname -n`
+
+  mkdir_tasks:
+    #  - name: Creates directory
+    #  file: path= state=directory mode=0777 recurse=yes
+
+    - name: Creates directory
+    file: path=/data/logs state=directory mode=0777 recurse=yes
+
+    - name: Creates directory
+    file: path=/data/logs/ansible state=directory mode=0775 recurse=yes
+
+    - name: Creates directory
+    file: path=/data/logs/ansible state=directory mode=0775 recurse=yes
+
+    - name: Creates directory
+    file: path=/data/logs/dhcp state=directory mode=0775 recurse=yes
+
+    - name: Creates directory
+    file: path=/data/logs/dns state=directory mode=0775 recurse=yes
+
+    - name: Creates directory
+    file: path=/data/logs/vagrant state=directory mode=0775 recurse=yes
+
+    - name: Creates directory
+    file: path=/data/tmp state=directory mode=0775 recurse=yes
+
+    - name: Creates directory
+    file: path=/data/PROJECTS state=directory mode=0775 recurse=yes
+
+    - name: Creates directory
+    file: path=/data/INSTALLER state=directory mode=0775 recurse=yes
+
+    - name: Creates directory
+    file: path=/data/data_app/keys/bad_archive state=directory mode=0775 recurse=yes
+
+    - name: Creates directory
+    file: path=/data/data_app/ansible state=directory mode=0777 recurse=yes
+
+    - name: Creates directory
+    file: path=/root/.ssh/ state=directory mode=0700 recurse=yes
+
+    - name: Creates directory
+    file: path=/home/vagrant/.ssh/ state=directory mode=0700 recurse=yes
+
+    - name: Creates directory for install files
+    file: path=/data/installer state=directory mode=0777 recurse=yes
+
+  command_tasks:
+    - name: Update YUM repository
+      shell: yum update -y
