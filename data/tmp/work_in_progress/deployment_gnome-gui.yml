@@ -1,0 +1,4 @@
+### Deploying The GNOME GUI ###
+## Deploying GNOME is comprised of two task.
+# Task 1: Nothing more than installing packages. With this established the packages are installed in the Configuration Management task.
+# Task 2: Configuring GNOME's internals and establishing the baseline configuration of the GUI. The rational for Task 2 is simple. After the packages are installed; Configuring the GUI's baseline resembles more of a deployment level task. This basaeline is established below.
